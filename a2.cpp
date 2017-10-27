@@ -1,7 +1,6 @@
 #include<iostream>
 #include<omp.h>
 using namespace std;
-int k=0;
 class strat
 {
 	public:
@@ -44,18 +43,21 @@ class strat
 			if(low<high)
 			{
 				j=party(arr,low,high);
-				cout<<"Pivot Element with "<<j<<"th index was found by thread->"<<k<<"\n";
+				//omp_set_nested(1);
+				cout<<"Pivot Element with "<<j<<"th index was found by thread->"<<omp_get_thread_num()<<"\n";
 				#pragma omp parallel sections
 				{
 				
 					#pragma omp section
 					{
-						k=k+1;
+						//k=k+1;
+						//cout << "Thread id " << omp_get_thread_num() << endl;
 						quicky(arr,low,j-1);
 					}
 					#pragma omp section
 					{
 						k=k+1;
+						//cout << "Thread id " << omp_get_thread_num() << endl;
 						quicky(arr,j+1,high);
 					}
 				}
