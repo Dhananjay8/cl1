@@ -74,10 +74,11 @@ int main()
 
     cout<<"Enter the value of n\n";
     cin>>n;
-    cout<<"Enter the "<<n<<" number of elements \n";
+    //cout<<"Enter the "<<n<<" number of elements \n";
 
     for(i=0;i<n;i++)
     {
+	cout<<"Enter "<<(i+1)<<"th Element:";
         cin>>arr[i];
     }
 
