@@ -15,7 +15,7 @@ object a1
 		{
 			binSearch(nos,srno,l,mid-1)
 		}
-		else if(l>r)
+		else
 		{
 			binSearch(nos,srno,mid+1,r)
 		}
