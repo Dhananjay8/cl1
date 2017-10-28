@@ -9,3 +9,5 @@ extern char yyval;
 . {return yytext[0];}
 \n {return 0;}
 %%
+
+//a=(b*c+b*c)+(b*c+b*c);
