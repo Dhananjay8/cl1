@@ -56,7 +56,7 @@ class strat
 					}
 					#pragma omp section
 					{
-						k=k+1;
+						//k=k+1;
 						//cout << "Thread id " << omp_get_thread_num() << endl;
 						quicky(arr,j+1,high);
 					}
