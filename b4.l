@@ -11,3 +11,4 @@ extern char yyval;
 %%
 
 //a=(b*c+b*c)+(b*c+b*c);
+//a=b*c+b*c+b*c+b*c;
