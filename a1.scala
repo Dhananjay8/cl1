@@ -23,16 +23,16 @@ object a1
 	def main(args:Array[String])
 	{
 		println("Enter Count:")
-		var n:Int=Console.readInt
+		var n:Int=scala.io.StdIn.readInt;
 		var nos=new Array[Int](n)
 		println("Enter Elements:")
 		for(i<- 0 to n-1)
 		{
-			nos(i)=Console.readInt
+			nos(i)=scala.io.StdIn.readInt;
 		}
 		nos=nos.sorted
 		println("Number to be Searched:")
-		var srno:Int=Console.readInt
+		var srno:Int=scala.io.StdIn.readInt;
 		var pos:Int=binSearch(nos,srno,0,n-1)
 		if(pos == -1)
 		{
